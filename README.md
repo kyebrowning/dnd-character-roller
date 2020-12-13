@@ -9,7 +9,7 @@ I mainly built this as an NPC roller as I DM a lot of games and have difficulty 
 In this version, only characters and classes from PHB are avaialbe and stats are generated using a spread of numbers from 8-15. Racial trait bonus have not been added to the generated numbers.
 
 
-###Goals for the Future
+### Goals for the Future
 
 * Be able to select/add different books' classes and races to the PHB list.
 * Generate HP stat.
