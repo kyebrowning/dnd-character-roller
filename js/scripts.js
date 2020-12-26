@@ -4,20 +4,39 @@ window.addEventListener("load", function() {
     let charRace = ['Dragonborn','Dwarf','Elf','Gnome','Half-Elf','Halfing','Half-Orc','Human','Tiefling'];
     let charClass = ['Barbarian','Bard','Cleric','Druid','Fighter','Monk','Paladin','Ranger','Rogue','Sorcerer','Warlock','Wizard'];
     let volvoRace = ['Aasamir','Bugbear','Firbolg','Goblin','Goliath','Hobgoblin','Kenku','Kolbold','Lizardfolk','Orc','Tabaxi','Triton','Yuan-ti Pureblood'];
+    let ravnicaRace = ['Centaur','Goblin','Loxodon','Minotaur','Simic Hybrid','Vedalken'];
+    let mToFRace = ['Duerger Dwarf','Eladrin Elf','Sea Elf','Shadar-kai Elf','Githyanki','Githzerai','Deep Gnome','Asmodeus Tiefling','Baalzebul Tiefling','Dispater Tiefling','Fierna Tiefling','Glasya Tiefling','Levistus Tiefling','Mammon Tiefling','Mephistopheles Tiefling','Zariel Tiefling'];
     let rollRace = [];
     let arr = [];
+    let rollClass = [];
+    let tashaRace = []
     let volvoCheck = document.getElementById('volvo');
+    let ravnicaCheck = document.getElementById('ravnica');
+    let foesCheck = document.getElementById('mToF');
     
 
     button.addEventListener("click", function(event){
         
         const charBox = document.getElementById("character-display");
 
-        if(volvoCheck.checked){
+        if(volvoCheck.checked && ravnicaCheck.checked && foesCheck.checked){
+            rollRace = charRace.concat(volvoRace,ravnicaRace,mToFRace);
+        } else if(volvoCheck.checked && ravnicaCheck.checked){
+            rollRace = charRace.concat(volvoRace,ravnicaRace);
+        } else if(foesCheck.checked && ravnicaCheck.checked){
+            rollRace = charRace.concat(mToFRace,ravnicaRace);
+        } else if(foesCheck.checked && volvoCheck.checked){
+            rollRace = charRace.concat(mToFRace,volvoRace);
+        } else if(volvoCheck.checked){
             rollRace = charRace.concat(volvoRace);
+        } else if(ravnicaCheck.checked){
+            rollRace = charRace.concat(ravnicaRace);
+        } else if(foesCheck.checked){
+            rollRace = charRace.concat(mToFRace);
         } else {
             rollRace = arr.concat(charRace);
         }
+
 
         function randomSelect(array){
             let index = Math.floor(Math.random()*array.length);
