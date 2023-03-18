@@ -6,7 +6,7 @@ https://kyebrowning.github.io/dnd-character-roller/
 
 I mainly built this as an NPC roller as I DM a lot of games and have difficulty coming up with new character combinations. 
 
-In this version, only characters and classes from PHB are avaialbe and stats are generated using a spread of numbers from 8-15. Racial trait bonus have not been added to the generated numbers.
+In this version, only characters and classes from PHB are available and stats are generated using a spread of numbers from 8-15. Racial trait bonus have not been added to the generated numbers.
 
 
 ### Goals for the Future
